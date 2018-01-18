@@ -4,26 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var cfg = require('./config/index')
-
-//连接mongodb开始------
-var dbURI = 'mongodb://'+cfg.db_server+'/'+cfg.db;
-mongoose.connect(dbURI);
-var db =  mongoose.connection;
-db.on('connected', function () {
-  console.log('Mongoose connected to ' + dbURI);
-});
-db.on('disconnected', function () {
-  console.log('Mongoose connection disconnected');
-});
-mongoose.connection.on('open', function () {
-    console.log('Mongoose connection is open now');
-});
-db.on('error',function (err) {
-    console.log('Mongoose connection error: ' + err);
-});
-//连接mongodb结束------
 
 var index = require('./routes/index');
 
