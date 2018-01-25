@@ -10,7 +10,7 @@
 }
 .download_box {
     position: absolute;
-    top: 65%;
+    top: 72%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -81,3 +81,15 @@ a {
 .mtm-text p{
     margin-bottom: 5px
 }
+.use-teacher{
+    position: absolute;
+    top: 67%;
+    width: 100%;
+    justify-content: center;
+    color:#fff;
+    text-align: center;
+    height: 30px
+}
+/* .use-teacher a{
+    color:#fff;
+} */

@@ -7,6 +7,12 @@ const path = require('path');
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+router.get('/appusepdf', function(req, res, next) {
+    res.render('appusepdf', { title: 'appusepdf' });
+});
+router.get('/appusevideo', function(req, res, next) {
+res.render('appusevideo', { title: 'appusepdf' });
+});
 
 // 实现文件下载。
 router.get('/file/:fileName', function(req, res, next) {
